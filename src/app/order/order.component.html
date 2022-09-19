@@ -1,0 +1,58 @@
+
+
+<div class="container">
+
+    <div class="center">
+        <h1>
+        Helloo <span style="color: red;text-shadow: 2px 2px 2px black;">
+             Total Price Is: {{total}} EGP </span>And Your Orders Are:
+        </h1>
+    </div>
+<div *ngFor='let dat of cartProduct;let index=index'class="bg_sec ord">
+
+    <div class="fl ord-img">
+        <img src='{{dat.image}}' class="image">
+    </div>
+    <div class="fl ordertex">
+        <h1>
+        {{dat.name}}
+        </h1>
+        <p>
+        Quantity:{{dat.quantity}}
+        </p>
+        <p>
+            Price For Quantity 1: {{dat.price}} EGP
+        </p>
+        <button (click)="deleteProduct(index)">Delete</button>
+    </div>
+    
+</div>
+<div class="clear"></div>
+
+</div>
+
+<div class="center order-butt">
+    <button (click)='delete()'>
+        <i class='fas fa-trash-alt' style='font-size:20px'></i>  Cancel
+    </button>
+    <button class="o" (click)='cart()'>
+        <i class='fas fa-shopping-basket' style='font-size:25px'></i>  Order
+    </button>
+</div>
+
+<div style="position: relative;">
+
+    <div class="basket" [class.basketdisplay]='display==true'>
+
+    <span  [class.ex]='display==true' (click)="exite()" style="position: fixed;">
+        <i class="fas fa-times"></i>
+        
+            </span>
+    
+    <div class="center">
+<h2 class="succ">
+    Successful
+</h2>
+    </div>
+</div>
+</div>   

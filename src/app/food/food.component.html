@@ -1,0 +1,213 @@
+<header class="header">
+
+    <span class="logo-mobile" >
+        <i class="fas fa-utensils"></i> Pastawessy
+      </span>
+      <nav [class.navv]="navigation==true">
+      
+        <ul>
+          
+          <li class="logo">
+              <i class="fas fa-utensils"></i> Pastawessy
+          </li>
+          <li>
+            <a class="nav-link active col" routerLink='/home' ><i class="fas fa-house-user"style='font-size:20px'></i> Home</a>
+        </li>
+      <li>
+          <a class="nav-link active col" routerLink='/food' > <span class="iconify" data-icon="mdi:pasta" style="font-size: 20px;padding-top: 0;"></span> Foods</a>
+      </li>
+      
+      <li>
+          <a class="nav-link col" routerLink='/location' > <i class='fas fa-map-marked-alt' style='font-size:20px'></i> locations</a>
+      </li>
+      
+      <li>
+        <a class="nav-link col" routerLink='/signup' ><i class='fas fa-address-card' style='font-size:20px'></i> Login</a>
+      </li>
+      
+      
+      <li>
+          <a class="nav-link col" (click)="cl_m()"><span class="iconify" data-icon="whh:restaurantmenu"style='font-size:20px'></span> Menu </a>
+      </li>
+      
+      <li>
+        <a class="bascket" [routerLink]="['/Orders',user_i]">
+            <i class="fas fa-cart-arrow-down shop"></i>
+        </a>
+       
+       <span class="count"> {{count}} </span>
+        
+    </li>
+      
+      
+      <li>
+          <a class="nav-link disabled col"  tabindex="-1" aria-disabled="true"style="color: white;
+          text-shadow: 2px 2px 3px black;" ><span style="color: red;">&phone;</span>0233384377</a>
+      </li>
+      
+        </ul>
+      
+      </nav>
+      
+      
+      <div class="ex" [class.ex]="men==true" (click)="menu()">
+        <i class="fa fa-times" aria-hidden="true"></i>
+    
+          </div>
+      
+      <div class="menu" [class.me]="men==true">
+      
+          <div class="men" >
+      
+              <div id="carouselExampleFade" class="carousel ">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="assets/images/bb.png" class="d-block w-100 i" >
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/images/m1.jpeg" class="d-block w-100 i" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="assets/images/m1.jpeg" class="d-block w-100 i" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+          </div>
+      
+      </div>
+      
+      <div class="hid" (click)="hide()"> 
+        &backcong;
+      
+      </div>
+      
+    
+       <div class="photo">
+           <img src="assets/images/a.jpg" class="imag">
+       </div>
+      
+    </header>
+
+    <hr>
+<div class="bg_sec">
+<h2 class="Healthy-food"data-aos="zoom-in">  Healthy Foods</h2>
+
+
+
+<div class="container">
+<div style="width: 53%;height: 40vh;margin-top: 20px;"class="fl ph">
+    <img src="assets/images/p1.jpg " class="im">
+</div>
+
+<div style="width: 42%;height: 40vh;margin-top: 20px;"class="fl ph">
+    <img src="assets/images/p.jpg "  class="im">
+    </div>
+
+    <div style="width: 45%;height: 40vh;"class="fl ph">
+        <img src="assets/images/p31.jpg "class="im">
+    </div>
+
+<div style="width: 50%;height: 40vh;"class="fl ph">
+    <img src=" assets/images/p26.jpg" class="im">
+
+</div>
+    </div>
+</div>
+    <div class="clear"></div>
+    <hr>
+<div style="position: relative;">
+
+
+
+
+<div class="basket" [class.basketdisplay]='display==true' >
+
+  <span  [class.ex]='display==true' (click)="exit()" style="position: fixed;">
+    <i class="fa fa-times" aria-hidden="true"></i>
+</span>
+    
+<div>
+  <div style="width: 100%;height: 55%;margin:3% auto 0;">
+
+    <img [src]="imagpath+image" style="width: 100%;height: 100%;">
+</div>
+<div style="width: 100%;margin:1% auto ;text-align: center;">  
+    <h1 style="margin-bottom: 1%;color:#d4b030b6;font-family: 'Satisfy', cursive;
+    font-size: 40px;">
+      {{text}}
+    </h1>
+
+    <form [formGroup]='registerform' (ngSubmit)="getdata(registerform)">
+    <label  style="font-size:30px;font-weight:bold;margin-right: 10px;color: antiquewhite;">
+        Quantity :
+    </label>
+        <input formControlName='quantity' type="number" name="quantity" style="width: 20%;height: 5vh;padding-left: 25px;
+        font-size: 20px;margin-bottom: 20px;">
+
+    <br>
+        <button class="butt" type="submit" (click)="displaay=true">
+            Add To Cart
+        </button>
+    </form>
+</div>
+</div>
+   
+
+</div>
+</div>
+
+<section  style="margin-top: 15px;">
+
+
+    <div  class="container" >
+
+      <div class="parent" *ngFor="let date of info;let index=index">
+        <div class="m_im" [class.m_i]='arrow[index]==true'>
+            <img src='{{date.img}}'>
+            
+          <span class="arr" (click)="cli(index)"> <i class="fa fa-eye" aria-hidden="true"></i> <span>Details</span></span>
+        </div>
+        <div class="text" [class.tex]='arrow[index]==true'>
+            <h3>
+        {{date.title}}
+            </h3>
+            <p>
+                Lorem ipsum dolor sit  excepturi ab atque
+            </p>
+           
+            <p > {{pricee}} EGP</p> 
+         <button *ngIf='islogin==true' class="button" (click)="cart(date,index)">
+            <span>  <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                Add To Cart
+            </span>
+         </button>   
+        </div>
+
+        
+      </div>
+    </div>
+    <div style="position: relative;">
+
+      <div class="basket" [class.basketdisplay]='displaay==true'>
+  
+      <span  [class.ex]='displaay==true' (click)="exite()" style="position: fixed;">
+          <i class="fas fa-times"></i>
+          
+              </span>
+      
+      <div class="center">
+  <h2 class="succ">
+      Successful
+  </h2>
+      </div>
+  </div>
+  </div>   
+</section>

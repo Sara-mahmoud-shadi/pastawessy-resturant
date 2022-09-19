@@ -1,0 +1,68 @@
+<header class="header-sign" >
+
+    <div class="bg_im">
+
+        <img src="assets/images/2.jpg" style="width: 100%; height: 100%;">
+
+    </div>
+
+    <div class="form">
+        <form [formGroup]='registerform' (ngSubmit)="getdata(registerform)">
+
+            <div class="form-input">
+
+            <div class="input">
+                <input type="text" placeholder="User Name :" formControlName='name'>
+                <br>
+                <span *ngIf='err_name!=null' >
+                    User Name Is Required
+                </span>
+            </div>
+
+            
+            <div class="input">
+                <input type="email" placeholder="Email :"formControlName='email'>
+                <br>
+                <span *ngIf='err_email !=null'>
+                    Email Is Required
+                </span>
+            </div>
+
+            <div class="input">
+                <input type="text" placeholder="Location :" formControlName='location'>
+                <br>
+                <span *ngIf='err_location!=null'>
+                    Location Is Required   </span>
+            </div>
+
+            <div class="input">
+                <input type="text" placeholder="Phone :" formControlName='phone'>
+                <br>
+                <span *ngIf='err_phone!=null'>
+                    Phone Is Required   </span>
+            </div>
+
+            <button class="r" type="submit"> Save Data </button>
+        </div>
+        </form>
+    </div>
+</header>
+<div style="position: relative;">
+
+    <div class="basket" [class.basketdisplay]='display==true'>
+
+    <span  [class.ex]='display==true' (click)="exite()" style="position: fixed;">
+        <i class="fas fa-times"></i>
+        
+            </span>
+    
+    <div class="center">
+        <h2 class="succ">
+            Successful
+        </h2>
+    </div>
+</div>
+</div>                          
+
+<br>
+

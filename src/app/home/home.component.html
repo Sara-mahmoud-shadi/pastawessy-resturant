@@ -1,0 +1,269 @@
+
+
+
+<header class="header">
+
+  <span class="logo-mobile" >
+    <i class="fas fa-utensils"></i> Pastawessy
+  </span>
+   
+    <nav [class.navv]="navigation==true">
+      
+      <ul>
+        
+        <li class="logo">
+            <i class="fas fa-utensils"></i> Pastawessy
+        </li>
+        <li>
+          <a class="nav-link active col" routerLink='/home' ><i class="fas fa-house-user"style='font-size:20px'></i> Home</a>
+      </li>
+    <li>
+        <a class="nav-link active col" routerLink='/food' > <span class="iconify" data-icon="mdi:pasta" style="font-size: 20px;padding-top: 0;"></span> Foods</a>
+    </li>
+    
+    <li>
+        <a class="nav-link col" routerLink='/location' > <i class='fas fa-map-marked-alt' style='font-size:20px'></i> locations</a>
+    </li>
+    
+    <li>
+      <a class="nav-link col" routerLink='/signup' ><i class='fas fa-address-card' style='font-size:20px'></i> Login</a>
+    </li>
+    
+    
+    <li>
+        <a class="nav-link col" (click)="cl_m()"><span class="iconify" data-icon="whh:restaurantmenu"style='font-size:20px'></span> Menu </a>
+    </li>
+    
+    <li>
+      <a class="bascket" [routerLink]="['/Orders',user_i]">
+          <i class="fas fa-cart-arrow-down shop"></i>
+      </a>
+     
+     <span class="count"> {{count}} </span>
+      
+  </li>
+    
+    
+    <li>
+        <a class="nav-link disabled col"  tabindex="-1" aria-disabled="true"style="color: white;
+        text-shadow: 2px 2px 3px black;" ><span style="color: red;">&phone;</span>0233384377</a>
+    </li>
+    
+      </ul>
+    
+    </nav>
+    
+    
+    <div class="ex" [class.ex]="men==true" (click)="menu()">
+      <i class="fa fa-times" aria-hidden="true"></i>
+  
+        </div>
+    
+    <div class="menu" [class.me]="men==true">
+    
+        <div class="men" >
+    
+            <div id="carouselExampleFade" class="carousel ">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/images/bb.png" class="d-block w-100 i" >
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/images/m1.jpeg" class="d-block w-100 i" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/images/m1.jpeg" class="d-block w-100 i" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    
+    </div>
+    
+    <div class="hid" (click)="hide()"> 
+      &backcong;
+    
+    </div>
+    
+    
+       <div class="content"> 
+     
+    
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" data-bs-interval="9946">
+                <div class="carousel-item active">
+                    <img src="assets/images/m.jpg" class="d-block w-100  imag " style="height: 100vh;">
+                  </div>
+                 
+                  <div class="carousel-item"  data-bs-interval="2000">
+                    <img src="assets/images/d3.jpg" class="d-block w-100  imag " style="height: 100vh;">
+                  </div>
+                  <div class="carousel-item"  data-bs-interval="2000">
+                    <img src="assets/images/n.jpg" class="d-block w-100  imag " style="height: 100vh;">
+                  </div>
+        
+                  <div class="carousel-item" >
+                    <img src="assets/images/v.jpg" class="d-block w-100  imag " style="height: 100vh;">
+                  </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    
+    
+    
+    
+    
+    
+        </div>
+            
+    </header>
+    
+    
+    <br>
+    
+    
+    <section class="bg_sec"> 
+    
+    <div class="container " >
+        
+    
+    <div class="comm" style="margin-top:8% ;border: 1px solid wheat;" >
+        
+    <div class="te">
+        <h1>
+            Discover Resturant
+        </h1>
+        <div class="sep">
+    
+            <div class="line left" data-aos="fade-left"> </div>
+             <span class="star">*</span> 
+             <div class="line right" data-aos="fade-right"> </div>
+        </div>
+        <p>
+            Pastaweesy restaurant : : 
+    We welcome you and we will be glad when you come , This restaurant is famous for its pasta <br> 
+    Let's see <a href="">Foods</a>
+        </p>
+    </div>
+    
+    
+    </div>
+    
+    <div class="comm"data-aos="flip-right">
+    
+    <div class="fl home-img1" >
+        <img src="assets/images/b.jpg"class="im" >
+    </div>
+    <div class="fl home-img2" >
+        <img src="assets/images/v.jpg" alt=""class="im" >
+    </div>
+    <div class="fl home-img3"  >
+        <img src="assets/images/d3.jpg" class="im" >
+    </div>
+    <div class="fl home-img4"  >
+        <img src="assets/images/a6.jpg" alt=""class="im" >
+    </div>
+    
+    </div>
+    <div class="clear"></div>
+    <div class="comm"data-aos="flip-right">
+    
+      <div class="fl" style="width: 90%;height: 30vh;margin: 1%;padding-left: 5%;">
+          <img src="assets/images/log.jpg"class="im" >
+      </div>
+     
+     
+      </div>
+      <br>
+      <div class="comm" style="margin-top:8% ;border: 1px solid wheat;" >
+        
+        <div class="te">
+          
+            <p style="padding:4%">
+              If you want to place an order, you must register 
+            </p>
+        </div>
+        
+        
+        </div>
+    
+    </div>
+    </section>
+    
+    <div class="d">
+    <h1 style="text-align: center;text-shadow: 2px 2px 2px black;"data-aos="flip-down">
+      Popular Dishes :
+    </h1>
+  <div class="container">
+    <div class="card fl margin"data-aos="fade-right">
+      <img src="assets/images/p.jpg" class="card-img-top" style="width: 100%;height: 40vh;">
+      
+      <div class="card-body center">
+        <h2>
+          Pasta in Gampery
+        </h2>
+        <p class="card-text center" style="color: black;">Some quick exampl
+          e text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  
+    <div class="card fl margin" data-aos="fade-left">
+      <img src="assets/images/p3.jpg" class="card-img-top" style="width: 100%;height: 40vh;">
+      <div class="card-body center">
+        <h2>
+          Pasta in Gampery
+        </h2>
+        <p class="card-text"style="color: black;" >Some quick example text to build on
+           the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  
+    <div class="card fl margin" data-aos="fade-right">
+      <img src="assets/images/p26.jpg" class="card-img-top" style="width: 100%;height: 40vh;">
+      <div class="card-body center">
+        <h2>
+          Pasta in Gampery
+        </h2>
+        <p class="card-text"style="color: black;" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  
+  </div>
+  </div>
+     
+    
+    
+    <div class="clear"></div>
+    
+    <div>
+    
+    <div class="about center">
+      <h2 data-aos="flip-up">
+        About Us
+      </h2>
+      <p>
+        Some quick example text to build on
+        the card title and make up the bulk of the card's content
+        Some quick example text to build on
+             the card title and make up the bulk of the card's content
+             Some quick example text to build on
+             the card title and make up the bulk of the card's content
+      </p>
+    </div>
+    
+    </div>

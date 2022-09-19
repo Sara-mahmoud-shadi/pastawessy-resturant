@@ -1,0 +1,135 @@
+
+.footer{
+  
+   
+	margin-top: 20px ;
+
+    
+   font-family: sans-serif;
+    
+    color: #fff;
+    background-color: rgb(49, 1, 1);
+    h2{
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+.footer-content .l ul li {
+    margin-bottom: 5px !important;
+}
+
+
+
+.x.f{
+    margin-top: 50px !important;
+}
+
+  .copy-right{
+	padding: 10px;
+	font-size: 18px;
+    text-align: center;
+}
+
+.fll{
+ 
+    h2{
+        padding-top: 10px; font-weight: bold;color:#ffd025b6;
+        text-shadow: 2px 1px  black;
+    }
+   li{
+    color :whitesmoke;
+    line-height: 2;
+   }      
+
+   a{
+ 
+    color: #fff;
+    &:hover{
+        color: bisque;
+    }
+   }
+   
+   
+}
+
+.soci i{
+    cursor: pointer;
+    margin-left: 5% !important;
+    &:hover{
+        color: orange;
+    }
+   
+   }
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.clear{
+    clear: both;
+}
+@media (max-width:992px){
+    .footer-content {
+        display: block !important;
+    }
+    .footer-content div{
+        width: 90%;
+       
+        font-size: 9rem !important; 
+        margin: 1%;
+    }
+    .footer-content ul{
+        display: block;
+    }
+    .footer-content a{
+        text-decoration: none;
+       margin-bottom: 10px;
+       color: #fff;
+        &:hover{
+        color: bisque;
+        }
+    }
+    .footer-content li{
+        font-size: 2rem;
+    }
+    .fll{
+        float: none;
+        text-align: center;
+       width: 100% !important;
+       
+    }
+    .soci h2 {margin-bottom: -50px;}
+    
+       .soci i{
+        
+        font-size: 2.5rem;}
+}
+
+@media(min-width:993px){
+    .footer-content div{
+        width: 18%;
+        font-size: 30px;
+        margin: 1%;
+    }
+    .footer-content ul{
+        display: block;
+        
+    }
+    
+    .footer-content a{
+        text-decoration: none;
+      
+    }
+    .fll{
+        float: left;
+        margin: auto;
+     
+    }
+    .footer-content li{
+        font-size: 20px;
+    }
+    .soci div{
+        width: 100% !important;
+    }
+    .soci i{font-size: 2rem;}
+    
+}
